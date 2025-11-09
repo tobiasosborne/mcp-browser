@@ -16,13 +16,13 @@ That said, it has 38 tests with 264 assertions, all passing. So it's *probably* 
 
 ## Features
 
-- ?? **Browse webpages** - Fetch any URL as clean text (no JavaScript, no ads, just content)
-- ?? **Session management** - Create persistent browsing sessions to navigate multiple pages
-- ?? **Dual browser support** - Use either w3m or lynx (your choice, we don't judge)
-- ?? **Cross-platform** - Works on Linux, macOS, and Windows (via WSL2)
-- ?? **Mock mode** - Runs tests even without browsers installed
-- ?? **Comprehensive logging** - See exactly what the LLM is asking for
-- ?? **MCP compliant** - Works with Claude Desktop, gptel, or any MCP client
+- **Browse webpages** - Fetch any URL as clean text (no JavaScript, no ads, just content)
+- **Session management** - Create persistent browsing sessions to navigate multiple pages
+- **Dual browser support** - Use either w3m or lynx (your choice, we don't judge)
+- **Cross-platform** - Works on Linux, macOS, and Windows (via WSL2)
+- **Mock mode** - Runs tests even without browsers installed
+- **Comprehensive logging** - See exactly what the LLM is asking for
+- **MCP compliant** - Works with Claude Desktop, gptel, or any MCP client
 
 ## Available Tools
 
@@ -345,4 +345,4 @@ File an issue if something breaks. Or doesn't work. Or works but shouldn't. Or i
 
 **Remember:** This was 100% agentic coding. If it breaks, blame the AI. If it works, I take full credit. That's how this works, right?
 
-*Built with Claude, tested with determination, deployed with hope.* ??
+*Built with Claude, tested with determination, deployed with hope.*
