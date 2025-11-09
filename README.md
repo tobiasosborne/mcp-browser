@@ -1,118 +1,15 @@
-# MCP Browser Server - Quick Start
+# MCP Browser Server - An agentic coding experiment in clojure
 
-## Project Structure
+## What is this thing?
+This project is an MCP server written in clojure that exposes some tools to LLMs via MCP. In particular, the tools exposed allow an agent to access URLs via the text-based browsers w3m and lynx. 
 
-```
-mcp-browser/
-├── project.clj
-├── src/
-│   └── mcp_browser/
-│       └── browser_management.clj
-└── test/
-    └── mcp_browser/
-        └── browser_management_test.clj
-```
+## Warning!!!
+This was 100% vibe coded using agentic programming via LLMs. I have never coded a project in clojure before, I barely understand the language and the MCP protocol.
 
-## Setup (5 minutes)
+I should never have been given the keys to this thing ;)
 
-```bash
-# 1. Create directory structure
-mkdir -p mcp-browser/src/mcp_browser
-mkdir -p mcp-browser/test/mcp_browser
+USE AT YOUR OWN RISK! YOU HAVE REALLY BEEN WARNED!
 
-# 2. Copy files into structure:
-# - project.clj → mcp-browser/
-# - browser_management.clj → mcp-browser/src/mcp_browser/
-# - browser_management_test.clj → mcp-browser/test/mcp_browser/
+### Usage
+You are on your own at the moment, but no doubt I will come back with a vibe coded tutorial. I used gptel and mcp in emacs to use the tool. I hooked it up to gemini and it seemed to work as expected.
 
-# 3. Install dependencies
-cd mcp-browser
-lein deps
-
-# 4. Make sure w3m or lynx is installed
-# Ubuntu/Debian:
-sudo apt install w3m lynx
-
-# Mac:
-brew install w3m lynx
-```
-
-## Running Tests
-
-```bash
-# Run all tests
-lein test
-
-# Run specific test namespace
-lein test mcp-browser.browser-management-test
-
-# Run with auto-reload
-lein test-refresh
-```
-
-## REPL Usage
-
-```clojure
-# Start REPL
-lein repl
-
-# Load namespace
-(require '[mcp-browser.browser-management :as bm])
-
-# Quick test
-(bm/fetch-url :w3m "https://example.com")
-
-# Create a session
-(def session-id (bm/create-session :w3m))
-
-# Navigate
-(bm/navigate-session session-id "https://example.com")
-
-# Get stats
-(bm/get-session-stats session-id)
-
-# Cleanup
-(bm/cleanup-session session-id)
-```
-
-## What's Working
-
-✅ **Browser Process Management**
-- Spawn w3m/lynx processes
-- Track process lifecycle
-- Kill processes cleanly
-
-✅ **Session Management**
-- Create/retrieve sessions
-- Track navigation history
-- Update session state
-- Cleanup resources
-
-✅ **Browser Operations**
-- Fetch URLs in dump mode
-- Navigate within sessions
-- Read process output
-
-✅ **Test Suite**
-- 40+ test cases
-- Process lifecycle tests
-- Session management tests
-- Resource limit tests
-
-## What's Next
-
-- [ ] MCP protocol layer (JSON-RPC)
-- [ ] Interactive browser mode
-- [ ] Link following
-- [ ] Content processing (extract links, tables)
-- [ ] Caching layer
-- [ ] Rate limiting
-
-## Current Status
-
-**Layer 2 (Browser Management): COMPLETE** ✓
-
-Ready to move on to:
-- Layer 1: MCP Protocol
-- Layer 3: Tool Implementation
-- Layer 4: Content Processing
